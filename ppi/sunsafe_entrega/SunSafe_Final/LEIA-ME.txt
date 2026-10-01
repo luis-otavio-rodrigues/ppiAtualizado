@@ -1,0 +1,43 @@
+SUNSAFE - ENTREGA FINAL
+
+1. SISTEMA (para colocar no XAMPP/htdocs)
+   Copie a pasta Sistema e renomeie para sunsafe, se desejar:
+   htdocs/sunsafe/
+      index_corrigido.html
+      api.php
+      config.php
+
+2. BANCO DE DADOS
+   No phpMyAdmin, importe:
+   Banco de Dados/sunsafe.sql
+
+   Este arquivo já reúne a estrutura principal e as alterações que antes
+   estavam no migracao_sunsafe.sql. NÃO é necessário importar uma migração
+   separada para uma instalação nova.
+
+3. ADMINISTRADOR
+   Copie temporariamente Instalacao/setup_admin.php para:
+   htdocs/sunsafe/setup_admin.php
+
+   Acesse no navegador:
+   http://localhost/sunsafe/setup_admin.php
+
+   Crie o administrador e, depois, APAGUE setup_admin.php do htdocs.
+
+4. ACESSO
+   http://localhost/sunsafe/index_corrigido.html
+
+5. XAMPP
+   Deixe Apache e MySQL ligados.
+   O config.php está configurado para MySQL local com:
+   host: 127.0.0.1
+   banco: sunsafe
+   usuário: root
+   senha: vazia
+
+IMPORTANTE
+- Para uma instalação nova, use somente Banco de Dados/sunsafe.sql.
+- Não coloque arquivos .sql dentro da pasta pública do sistema.
+- Não deixe setup_admin.php no servidor depois de criar o administrador.
+- O arquivo reset_admin.php não faz parte da entrega final; ele foi usado
+  apenas para corrigir a configuração durante os testes.
